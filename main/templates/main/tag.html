@@ -1,0 +1,50 @@
+{% extends "main/base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<style>
+    h1{
+        color: white;
+        font-family: 'Ink Free';
+    }
+    input{
+        color: white;
+        display: block;
+        width: 270px;
+        text-align: left;
+        background-color: #23272B;
+        font-family:'Tw Cen MT'; 
+        border: 0px;
+        border-radius: 4px;
+    }
+    
+    input[type='submit']{
+        color: #7008A4;
+        align-self:flex-end;
+        color: #7008A4;
+        display: block;
+        width: 270px;
+        text-align: center;
+    }
+    form{
+        color: #7008A4;
+    }
+    a{
+        color: white;
+        font-family: 'TW Cen MT';
+        font-size: 20px;
+    }
+    a:hover{
+        color: red
+        ;
+    }
+    h3{
+        color: white;
+        font-family: 'TW Cen MT';
+    }
+</style>
+<form action="/tags/" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" name="save" value="add" class="btn btn-dark">
+</form>
+{% endblock %}
