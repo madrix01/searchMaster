@@ -1,1 +1,1 @@
-web: gunicorn searchMaster.wsgi --log-file
+web: gunicorn searchMaster.wsgi --log-file - 
