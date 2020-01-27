@@ -37,26 +37,29 @@ def SearchView(request):
                 'part' : 'snippet',
                 'q' : f"{search}+{tags}",
                 'key' : settings.YOUTUBE_DATA_API_KEY,
-                'maxResults' : 9,
+                'maxResults' : 1,
                 'type' : 'video',
             }
             r = requests.get(search_url, params=params)
             res = r.json()['items']
-            result = []
+            res_id = []
+            res_title = []
             x = range(len(result))
             for i in res:
-                result.append(i['id']['videoId'])
-            print(result)
+                res_id.append(i['id']['videoId'])
+            print(res_id)
+            for i in res:
+                res_title.append(i['snippets']['title'])
 
     else:
         form = SearchForm()
         res = ""
-        result = []
+        res_id = []
+        res_title = []
         x = 0
     return render(request, "main/search.html", {
         "form":form,
         'res' : res,
         'result': result,
         'x': x,
-
     })
