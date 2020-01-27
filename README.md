@@ -1,4 +1,4 @@
-searchmaster.herokuapp.com
+https://searchmaster.herokuapp.com/
 
 Hello,
 This is my Django Search project which helps in searching youtube video more efficiently.
