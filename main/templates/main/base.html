@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>{% block title %}That's what the code said{% endblock %}</title>
+    <ul>
+        <li><a href="/search/">Search</a></li>
+        <li><a href="/tags/">Add Tags</a></li>
+    </ul>
 </head>
     <body style="background-color: #000000;">
     
@@ -31,8 +35,22 @@
             padding: 0px 10px;
         }
         h6{
-            color: #00BFFF;
+            color: #7008A4;
             font-family: 'TW Cen MT';
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            float: left;
+        }
+        li a{
+            display: block;
+            padding: 8px;
+            background-color: #7008A4;
         }
     </style>
 </html>

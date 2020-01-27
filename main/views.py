@@ -41,12 +41,22 @@ def SearchView(request):
                 'type' : 'video',
             }
             r = requests.get(search_url, params=params)
-            res = r.json()['items'][0]['id']['videoId']
+            res = r.json()['items']
+            result = []
+            x = range(len(result))
+            for i in res:
+                result.append(i['id']['videoId'])
+            print(result)
+
     else:
         form = SearchForm()
         res = ""
+        result = []
+        x = 0
     return render(request, "main/search.html", {
         "form":form,
         'res' : res,
+        'result': result,
+        'x': x,
 
     })

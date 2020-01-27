@@ -47,6 +47,7 @@
     {{form.as_p}}
     <input type="submit" name="save" value="add" class="btn btn-dark">
 </form>
-{{res}}
-
+{% for i in result %}
+    {{i}}
+{% endfor %}
 {% endblock %}
